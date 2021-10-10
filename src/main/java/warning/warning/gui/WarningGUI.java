@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
+import warning.warning.Main;
 import warning.warning.Util;
 import warning.warning.warnings.UserManager;
 
@@ -31,7 +32,9 @@ public class WarningGUI {
                         list.add(ChatColor.WHITE + "§lㄴ 밴 진행중");
                     }
                 }
-                inv.addItem(Util.getHeadAdapter(user.getUUID(), list));
+                Bukkit.getServer().getScheduler().runTask(Main.instance,() -> {
+                    inv.addItem(Util.getHeadAdapter(user.getUUID(), list));
+                });
             }
         });
 
