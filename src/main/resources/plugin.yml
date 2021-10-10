@@ -1,0 +1,6 @@
+name: Warning
+version: 1.0.3
+main: warning.warning.Main
+api-version: 1.16
+commands:
+  경고:
